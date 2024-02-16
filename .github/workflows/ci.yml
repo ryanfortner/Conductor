@@ -66,6 +66,7 @@ jobs:
           cargo install cargo-bundle
     - name: Build Application
       run: |
+        export NODE_OPTIONS=--openssl-legacy-provider
         make setup && make release
     - name: Bundle Application
       run: |
